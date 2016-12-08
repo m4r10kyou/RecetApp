@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="fondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="1126.0" style="-fx-background-color: transparent;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.upv.recipes.controller.mainSceneController">
+   <children>
+      <SplitPane dividerPositions="0.5" focusTraversable="false" layoutX="1003.4461059570312" layoutY="25.48130226135254" prefHeight="704.0" prefWidth="1126.0" style="-fx-background-color: transparent;" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane SplitPane.resizableWithParent="false">
+               <children>
+                  <TableView fx:id="listTable" fixedCellSize="0.0" focusTraversable="false" layoutX="61.0" layoutY="70.0" minWidth="-Infinity" prefHeight="518.0" prefWidth="400.0" rotate="-0.9" style="-fx-background-color: transparent; fx-table-cell-border-color: red;" stylesheets="@application.css" AnchorPane.bottomAnchor="114.0" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="70.0">
+                    <columns>
+                      <TableColumn fx:id="categTable" editable="false" prefWidth="141.63279569149017" resizable="false" style="-fx-background-color: transparent;" text="categ" />
+                      <TableColumn fx:id="dishTable" editable="false" prefWidth="246.99542236328125" resizable="false" text="Plato" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TableView>
+                  <HBox layoutX="48.0" layoutY="598.0">
+                     <children>
+                        <Button fx:id="newRecipe" layoutX="101.0" layoutY="629.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#newBut" prefHeight="60.0" prefWidth="100.0" rotate="-2.5" style="-fx-background-color: transparent;" text="Nueva">
+                           <HBox.margin>
+                              <Insets bottom="-0.0" top="16.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="JaneAusten" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="edit" layoutX="177.0" layoutY="629.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editBut" prefHeight="60.0" prefWidth="96.0" rotate="-2.25" style="-fx-background-color: transparent;" text="Editar" textOverrun="WORD_ELLIPSIS">
+                           <HBox.margin>
+                              <Insets left="95.0" right="95.0" top="7.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="JaneAusten" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="delete" layoutX="267.0" layoutY="629.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delBut" prefHeight="60.0" prefWidth="97.0" rotate="-2.0" style="-fx-background-color: transparent;" text="Borrar">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="JaneAusten" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane SplitPane.resizableWithParent="false">
+               <children>
+                  <Button id="salir" focusTraversable="false" layoutY="1.0471444129943848" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#salir" prefHeight="64.0" prefWidth="60.0" rotate="-1.0" style="-fx-background-color: transparent;" stylesheets="@application.css" AnchorPane.bottomAnchor="614.0" AnchorPane.rightAnchor="62.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <GridPane layoutX="65.0" layoutY="106.0" prefHeight="443.0" prefWidth="419.0" rotate="-1.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="72.01517105102539" minHeight="0.0" prefHeight="39.08512878417969" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="72.01517105102539" minHeight="10.0" prefHeight="39.08512878417969" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="249.03048706054688" minHeight="10.0" prefHeight="235.9148712158203" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="57.98332214355469" minHeight="10.0" prefHeight="33.969512939453125" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fx:id="photoView" fitHeight="222.0" fitWidth="421.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" rotate="1.0" translateX="8.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                           <image>
+                              <Image url="@../../../../../../../Users/Mario/AppData/Local/Recetario/img/macarrones-bolonesa.jpg" />
+                           </image>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" height="53.62" offsetY="5.0" radius="23.2825" width="41.51" />
+                           </effect>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </ImageView>
+                        <HBox minHeight="15.0" prefHeight="46.0" prefWidth="244.0">
+                           <children>
+                              <Label fx:id="dish" minWidth="-Infinity" rotate="1.05" text="Macarrones" translateY="15.0">
+                                 <font>
+                                    <Font name="Mom´sTypewriter" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="dificult" minWidth="-Infinity" rotate="1.0" text="Dificultad Media" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Mom´sTypewriter" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dinners" minWidth="-Infinity" rotate="1.25" text=" 3 Comensales" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Mom´sTypewriter" size="22.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="201.0" prefWidth="196.0" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="-4.0" translateX="13.0" translateY="-8.0">
+                                 <image>
+                                    <Image url="@../../../../images/celo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="rating" alignment="TOP_RIGHT" fillHeight="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="110.0" translateY="-15.0" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="50.0" />
+                           </GridPane.margin>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <Label fx:id="vista" layoutX="66.0" layoutY="48.0" text="Vista Rapida">
+                     <font>
+                        <Font name="Old printing press_FREE-version" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="consultBut" layoutX="105.0" layoutY="597.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#consultRecipe" prefHeight="60.0" prefWidth="363.0" rotate="0.5" style="-fx-background-color: transparent;" text="Consulta con más detalle esta receta">
+                     <font>
+                        <Font name="JaneAusten" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

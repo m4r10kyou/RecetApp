@@ -1,0 +1,182 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/*
+ * Fondo para la ventana principal
+ */
+
+#fondo {
+	-fx-background-image: url(../../../../images/mainScene.png);
+   	-fx-background-repeat: no-repeat;   
+   	-fx-background-position: center center;
+}
+
+/*
+ * Fondo Ventana editor
+ */
+#editor {
+	-fx-background-image: url(../../../../images/editWindow.png);
+   	-fx-background-repeat: no-repeat;   
+   	-fx-background-position: center center;
+}
+
+#salir {
+	-fx-background-image: url(../../../../images/salir.png);
+   	-fx-background-repeat: no-repeat;   
+   	-fx-background-position: center center;
+}
+/*Quita la linia del Splitpane */
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 0 0 0;
+}
+
+
+/*Quitar cabecera de la tabla */
+.column-header-background { 
+	visibility: hidden;
+	 -fx-padding: -1em;
+}
+
+/*Modificar estrellas Rating */
+.rating > .container > .button {
+	  -fx-background-image: url(../../../../images/unselected-star.png);
+	  -fx-padding: 24 24; 
+	  -fx-background-size: 48 48;
+	
+}
+
+
+.rating > .container > .button.strong {
+  	-fx-background-image: url(../../../../images/selected-star.png);
+	-fx-background-size: 48 48;
+	}
+
+/*Cambiamos los estilos de los scrollbars  */
+.scroll-pane {
+  -fx-background-color: transparent;
+}
+.scroll-bar .increment-button {
+  visibility: hidden;
+}
+ .scroll-bar .decrement-button {
+  visibility: hidden;
+}
+
+ .scroll-bar {
+  -fx-background-color: transparent;
+  -fx-opacity:80%;
+}
+
+.scroll-bar .track-background {
+  visibility: hidden;
+
+}
+
+.scroll-bar.track {
+  visibility: hidden;
+}
+.scroll-bar .thumb {
+  -fx-background-color: fdedcb;
+}
+
+.hide-thumb .scroll-bar .thumb {
+  -fx-background-color: transparent;
+}
+/*Fija transparentes los scroll-panes */
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+
+/*Oculta el scroll horizontal */
+.table-view *.scroll-bar:horizontal *.increment-arrow, 
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+    -fx-opacity:0;    
+    }
+
+
+.radio-button .radio {
+    -fx-background-color: transparent;
+    /*-fx-background-repeat: no-repeat;
+    -fx-background-image: url(../../../../images/cuadro.png);
+    -fx-background-position: right;*/
+     -fx-padding: -12.5;
+    -fx-background-size: 40;
+} 
+
+.radio-button -radio:armed {
+ -fx-background-color: transparent;
+ -fx-background-image: null;
+}
+
+
+.radio-button:selected .radio .dot { 
+    -fx-background-image: url(../../../../images/tick2.png);
+    -fx-background-repeat:stretch;
+    -fx-background-size	:cover ;
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-background-size: 30.0;
+   	-fx-background-position:center;
+   	-fx-translate-x:42;
+
+}
+
+/*
+ * Para los dialogos
+ */
+ 
+ #dialogBack {
+	-fx-background-image: url(../../../../images/paper-notes.png);
+	-fx-background-size	:cover ;
+   	-fx-background-repeat:stretch ; 
+   	-fx-background-position: center center;
+}
+
+ #recipesWin{
+	-fx-background-image: url(../../../../images/recetaWindow.png);
+	-fx-background-size	:cover ;
+   	-fx-background-repeat:stretch ; 
+   	-fx-background-position: center center;
+}
+
+
+/*Para los TextArea */
+
+.text-area {
+    -fx-background-color: rgba(53,89,119,0.4);
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+
+/*Estilos Tabla */
+.table-view {
+    -fx-base: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-color: transparent;    
+    -fx-padding: 5;
+}
+
+
+
+.table-cell {
+    -fx-text-fill: Black;
+	-fx-font-size: 10pt;
+	-fx-font-family: 'JaneAustin';
+}

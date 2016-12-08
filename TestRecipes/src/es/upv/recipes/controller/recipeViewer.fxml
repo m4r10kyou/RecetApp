@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="recipesWin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1090.0" style="-fx-background-color: transparent;" stylesheets="@../view/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.upv.recipes.controller.recipeViewerController">
+   <children>
+      <Button fx:id="ok" layoutX="948.0" layoutY="621.0" mnemonicParsing="false" onAction="#okButton" style="-fx-background-color: transparent;" text="Cerrar">
+         <font>
+            <Font name="JaneAusten" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <GridPane layoutX="66.0" layoutY="52.0" prefHeight="610.0" prefWidth="423.0" rotate="-2.0">
+         <children>
+            <ImageView fx:id="photoView" fitHeight="222.0" fitWidth="421.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" rotate="2.0" translateX="8.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowSpan="2">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="53.62" offsetY="5.0" radius="23.2825" width="41.51" />
+               </effect>
+               <image>
+                  <Image url="@../../../../../../../Users/Mario/AppData/Local/Recetario/img/macarrones-bolonesa.jpg" />
+               </image>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ImageView>
+            <HBox alignment="TOP_CENTER" prefHeight="285.0" prefWidth="424.0" rotate="2.0" GridPane.rowSpan="2">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="-4.0" translateX="13.0" translateY="-8.0">
+                     <image>
+                        <Image url="@../../../../images/celo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <VBox prefHeight="190.0" prefWidth="424.0" translateY="25.0" GridPane.rowIndex="3">
+               <children>
+                  <HBox alignment="CENTER_LEFT" GridPane.rowIndex="2">
+                     <children>
+                        <ImageView fitHeight="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@../../../../images/dinners.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="dinners" minWidth="-Infinity" rotate="1.25" text=" 3 Comensales" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Mom´sTypewriter" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="136.0" prefWidth="424.0" GridPane.rowIndex="3">
+                     <children>
+                        <ImageView fitHeight="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@../../../../images/coccion.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" right="10.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="coccion" minWidth="-Infinity" rotate="1.25" text=" *** min" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Mom´sTypewriter" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="428.0" GridPane.rowIndex="4">
+                     <children>
+                        <ImageView fitHeight="40.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@../../../../images/prep.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="25.0" right="20.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="preparacionTime" minWidth="-Infinity" rotate="1.25" text="*** min" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Mom´sTypewriter" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="dish" minWidth="-Infinity" text="Macarrones" translateY="-55.0" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Mom´sTypewriter" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoria" text="Categ" translateX="100.0" translateY="200.0" />
+            <HBox fx:id="rating" alignment="TOP_RIGHT" fillHeight="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="110.0" stylesheets="@../view/editorStars.css" translateY="-15.0" GridPane.rowIndex="2" />
+            <ScrollPane hbarPolicy="NEVER" prefHeight="131.0" prefViewportHeight="151.0" prefViewportWidth="423.0" prefWidth="423.0" style="-fx-background-color: transparent;" GridPane.rowIndex="5">
+               <content>
+                  <TextFlow fx:id="observ" prefHeight="145.0" prefWidth="425.0" GridPane.rowIndex="5" />
+               </content>
+            </ScrollPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="249.03048706054688" minHeight="10.0" prefHeight="235.9148712158203" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="129.95614624023438" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="155.0" minHeight="0.0" prefHeight="75.11178588867188" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="221.84002685546875" minHeight="0.0" prefHeight="25.888214111328125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="305.77056884765625" minHeight="10.0" prefHeight="69.69033813476562" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="242.1380615234375" minHeight="10.0" prefHeight="148.30966186523438" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="dificult" layoutX="836.0" layoutY="54.0" minWidth="-Infinity" rotate="-1.25" text="Receta de dificultad Difícil" textAlignment="RIGHT">
+         <font>
+            <Font name="My Boyfriend's Handwriting" size="14.0" />
+         </font>
+      </Label>
+      <ScrollPane hbarPolicy="NEVER" layoutX="546.0" layoutY="158.0" prefHeight="172.0" prefViewportHeight="169.21934509277344" prefViewportWidth="509.723876953125" prefWidth="478.0" style="-fx-background-color: transparent;">
+         <content>
+            <TextFlow fx:id="ingredFlow" layoutX="525.0" layoutY="100.0" prefHeight="167.0" prefWidth="478.0" />
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="79.0" fitWidth="82.0" layoutX="546.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" translateY="30.0">
+         <image>
+            <Image url="@../../../../images/Ingred.png" />
+         </image>
+      </ImageView>
+      <ScrollPane hbarPolicy="NEVER" layoutX="544.0" layoutY="366.0" prefHeight="285.0" prefViewportHeight="241.2369384765625" prefViewportWidth="477.9942626953125" prefWidth="480.0" style="-fx-background-color: transparent;">
+         <content>
+            <TextFlow fx:id="prepaFlow" layoutX="545.0" layoutY="386.0" prefHeight="247.0" prefWidth="474.0" rotate="-1.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="ingred" layoutX="661.0" layoutY="119.0" text="Label" />
+      <Label fx:id="prep" layoutX="675.0" layoutY="325.0" text="Label" />
+   </children>
+</AnchorPane>

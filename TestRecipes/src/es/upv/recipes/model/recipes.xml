@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CookBook>
+    <Recipe>
+        <categPrim>Principal</categPrim>
+        <categSeg>Pasta</categSeg>
+        <comensal>6</comensal>
+        <dificultad>Media</dificultad>
+        <foto>macarrones-bolonesa.jpg</foto>
+        <ingred>500 gr. de macarrones
+400 gr. de carne picada
+600 gr. de salsa de tomate
+2 cdas de margarina
+1 pimiento verde
+1 cebolla
+1 cubito de caldo de carne
+2 dientes de ajo
+1 huevo sancochado
+100 gr. de queso rallado</ingred>
+        <nombre>Macarrones</nombre>
+        <observ>ninguna</observ>
+        <prep>En una olla grande, poner a hervir el agua y echar un cubito de caldo de pollo, sal y dos cucharadas soperas de margarina. Cocinar los macarrones hasta que estén en su punto. Una vez listos y escurrirlos, dejarlos enfriar y colocarlos en una fuente.
+En otro recipiente, sancochar un huevo durante 8 minutos, pelarlo y picarlo.
+Luego, en una sartén, freír el pimiento, la cebolla y el ajo. Agregar la carne picada, el huevo picado y el tomate natural. Echar la salsa sobre la fuente de los macarrones y esparcir el queso por encima.Llevar al horno hasta que esté gratinado. Servir.</prep>
+        <timeCoccion>10</timeCoccion>
+        <timePrep>60</timePrep>
+        <valoracion>4</valoracion>
+    </Recipe>
+    <Recipe>
+        <categPrim>Postre</categPrim>
+        <categSeg>Dulce</categSeg>
+        <comensal>4</comensal>
+        <dificultad>Fácil</dificultad>
+        <foto>karl5044-arroz-con-leche-xl-668x400x80xX.jpg</foto>
+        <ingred>1 litro de leche
+100 gr. de arroz
+70 gr. de azúcar
+1 limón
+1 rama de canela
+1 cucharada de canela en polvo
+hojas de menta (para decorar)</ingred>
+        <nombre>Arroz con leche cremoso</nombre>
+        <observ>Mientras se esté enfriando el arroz es conveniente seguir removiendo para que no se quede encima una capa de nata y el arroz quede más sabroso.</observ>
+        <prep>Pon la leche en una cazuela. Añade el arroz, la rama de canela y un poco de cáscara de limón.Cuécelo a fuego suave durante unos 50 minutos. Remueve a menudo.
+Agrega el azúcar y cuécelo durante 10 minutos más. Remueve para que se deshaga el azúcar.
+Retira la canela, deja templar y reparte el arroz con leche en 4 recipientes.Deja templar y espolvorea con un poco de canela en polvo. Decora con unas hojasde menta y si quieres con la rama de canela.</prep>
+        <timeCoccion>60</timeCoccion>
+        <timePrep>75</timePrep>
+        <valoracion>1</valoracion>
+    </Recipe>
+</CookBook>

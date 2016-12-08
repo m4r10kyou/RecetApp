@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="editor" prefHeight="701.0" prefWidth="605.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.upv.recipes.controller.editorSceneController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="55.0" layoutY="83.0" prefHeight="509.0" prefViewportHeight="519.0" prefViewportWidth="441.0" prefWidth="441.0" rotate="0.5" style="-fx-background-color: transparent;" stylesheets="@../view/application.css">
+         <content>
+            <AnchorPane prefHeight="794.0" prefWidth="416.0" style="-fx-background-color: transparent;">
+               <children>
+                  <GridPane layoutX="14.0" layoutY="6.0" prefHeight="902.0" prefWidth="429.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-13.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="215.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="202.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="186.96551513671875" minHeight="10.0" prefHeight="168.94873046875" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="146.1363525390625" minHeight="10.0" prefHeight="88.05126953125" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="dish" text="Nombre del Plato" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Mom´sTypewriter" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idDish" blendMode="HARD_LIGHT" focusTraversable="false" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: Transparent;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="20.0" right="10.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                           <font>
+                              <Font name="My Boyfriend's Handwriting" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="numDinners" blendMode="HARD_LIGHT" focusTraversable="false" minHeight="-Infinity" prefHeight="40.0" prefWidth="157.0" style="-fx-background-color: Transparent;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="20.0" right="10.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                           <font>
+                              <Font name="My Boyfriend's Handwriting" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="dinners" text="Número de Comensales" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Mom´sTypewriter" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="TOP_CENTER" prefHeight="130.0" prefWidth="209.0" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="imgBut" alignment="TOP_LEFT" focusTraversable="false" mnemonicParsing="false" onAction="#selPhoto" style="-fx-background-color: transparent;" text="Selecciona Foto" translateY="-30.0" GridPane.rowIndex="1">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="photoView" fitHeight="155.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" rotate="-0.5" translateX="-20.0" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowSpan="2" GridPane.vgrow="NEVER">
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" height="53.62" offsetY="5.0" radius="23.2825" width="41.51" />
+                           </effect>
+                           <image>
+                              <Image url="@../../../../images/recipes/vacio.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </ImageView>
+                        <HBox alignment="TOP_CENTER" prefHeight="201.0" prefWidth="196.0" GridPane.columnIndex="1">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5" translateX="-30.0" translateY="-2.0">
+                                 <image>
+                                    <Image url="@../../../../images/celo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <ComboBox fx:id="comboDificul" focusTraversable="false" minWidth="-Infinity" prefHeight="25.0" prefWidth="93.0" promptText="Dificultad" style="-fx-background-color: fdedcb;" GridPane.rowIndex="4" />
+                        <VBox prefHeight="64.0" prefWidth="226.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Label fx:id="valoration" text="Valoración Receta">
+                                 <font>
+                                    <Font name="Mom´sTypewriter" size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox fx:id="ratingBox" prefHeight="41.0" prefWidth="237.0" style="-fx-padding: 10 10; -fx-background-size: 20;" stylesheets="@../view/editorStars.css">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="rating" />
+                                    <String fx:value="strong" />
+                                 </styleClass>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding></HBox>
+                           </children>
+                        </VBox>
+                        <HBox minWidth="-Infinity" prefHeight="90.0" prefWidth="430.0" GridPane.rowIndex="5">
+                           <children>
+                              <VBox prefHeight="95.0" prefWidth="423.0">
+                                 <children>
+                                    <Label fx:id="categoria" text="Categoría">
+                                       <font>
+                                          <Font name="Mom´sTypewriter" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="48.0" prefWidth="420.0">
+                                       <children>
+                                          <RadioButton fx:id="Principal" contentDisplay="CENTER" minWidth="-Infinity" mnemonicParsing="false" selected="true" snapToPixel="false" text="Principal">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="primeraCategoria" />
+                                             </toggleGroup>
+                                             <HBox.margin>
+                                                <Insets left="17.0" right="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="12.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Primero" contentDisplay="CENTER" layoutX="183.0" layoutY="28.0" minWidth="-Infinity" mnemonicParsing="false" selected="true" snapToPixel="false" text="Primero" toggleGroup="$primeraCategoria">
+                                             <HBox.margin>
+                                                <Insets left="17.0" right="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="12.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Segundo" contentDisplay="CENTER" layoutX="227.0" layoutY="28.0" minWidth="-Infinity" mnemonicParsing="false" selected="true" snapToPixel="false" text="Segundo" toggleGroup="$primeraCategoria">
+                                             <HBox.margin>
+                                                <Insets left="17.0" right="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="12.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Postre" contentDisplay="CENTER" layoutX="270.0" layoutY="28.0" minWidth="-Infinity" mnemonicParsing="false" selected="true" snapToPixel="false" text="Postre" toggleGroup="$primeraCategoria">
+                                             <HBox.margin>
+                                                <Insets left="17.0" right="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="12.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="116.0" prefWidth="423.0">
+                                       <children>
+                                          <RadioButton fx:id="Arroces" minWidth="-Infinity" mnemonicParsing="false" selected="true" text="Arroces">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="segundaCategoria" />
+                                             </toggleGroup>
+                                             <HBox.margin>
+                                                <Insets left="7.0" right="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="11.2" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Pasta" layoutX="99.0" layoutY="28.0" minWidth="-Infinity" mnemonicParsing="false" text="Pasta" toggleGroup="$segundaCategoria">
+                                             <HBox.margin>
+                                                <Insets left="7.0" right="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="11.2" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Carne" minWidth="-Infinity" mnemonicParsing="false" text="Carne" toggleGroup="$segundaCategoria">
+                                             <HBox.margin>
+                                                <Insets left="7.0" right="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="11.2" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Pescado" minWidth="-Infinity" mnemonicParsing="false" prefHeight="36.0" prefWidth="55.0" text="Pescado" toggleGroup="$segundaCategoria">
+                                             <HBox.margin>
+                                                <Insets left="7.0" right="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="11.2" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Verduras" minWidth="-Infinity" mnemonicParsing="false" text="Verduras" toggleGroup="$segundaCategoria">
+                                             <HBox.margin>
+                                                <Insets left="7.0" right="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="11.2" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="Dulce" layoutX="74.0" layoutY="28.0" minWidth="-Infinity" mnemonicParsing="false" text="Dulce" toggleGroup="$segundaCategoria">
+                                             <HBox.margin>
+                                                <Insets left="7.0" right="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Mom´sTypewriter" size="11.2" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="tCoccion" blendMode="HARD_LIGHT" prefHeight="25.0" prefWidth="151.0" promptText="min" style="-fx-background-color: Transparent;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="50.0" right="10.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                           <font>
+                              <Font name="My Boyfriend's Handwriting" size="12.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="tlCoccion" text="Tiempo de Cocción" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Mom´sTypewriter" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="tlPrep" layoutX="10.0" layoutY="588.0" prefHeight="55.0" prefWidth="249.0" text="Tiempo de Preparación" GridPane.columnSpan="2" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="Mom´sTypewriter" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tPrep" blendMode="HARD_LIGHT" layoutX="252.0" layoutY="587.0" prefHeight="25.0" prefWidth="197.0" promptText="min" style="-fx-background-color: Transparent;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets left="50.0" right="10.0" />
+                           </GridPane.margin>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                           <font>
+                              <Font name="My Boyfriend's Handwriting" size="12.0" />
+                           </font>
+                        </TextField>
+                        <VBox GridPane.rowIndex="8">
+                           <children>
+                              <Label fx:id="ingred" prefHeight="95.0" prefWidth="249.0" text="Ingredientes" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="Mom´sTypewriter" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextArea fx:id="textIngred" blendMode="HARD_LIGHT" prefHeight="250.0" prefWidth="200.0" style="-fx-background-color: Transparent;" GridPane.rowIndex="8">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="My Boyfriend's Handwriting" size="12.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="510.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <children>
+                              <Label fx:id="prep" prefHeight="95.0" prefWidth="249.0" text="Preparación" GridPane.rowIndex="8">
+                                 <font>
+                                    <Font name="Mom´sTypewriter" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextArea fx:id="textPrep" blendMode="HARD_LIGHT" prefHeight="250.0" prefWidth="200.0" style="-fx-background-color: Transparent;" GridPane.rowIndex="8">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="10.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="My Boyfriend's Handwriting" size="12.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="9">
+                           <children>
+                              <Label fx:id="observ" prefHeight="55.0" prefWidth="249.0" text="Observaciones">
+                                 <font>
+                                    <Font name="Mom´sTypewriter" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="textObserv" blendMode="HARD_LIGHT" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: Transparent;">
+                                 <VBox.margin>
+                                    <Insets right="20.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="My Boyfriend's Handwriting" size="12.0" />
+                                 </font></TextArea>
+                           </children>
+                           <GridPane.margin>
+                              <Insets top="20.0" />
+                           </GridPane.margin>
+                        </VBox>
+                        <RadioButton fx:id="nulll" mnemonicParsing="false" text="null" toggleGroup="$segundaCategoria" visible="false" />
+                        <RadioButton fx:id="nullll" mnemonicParsing="false" text="null" toggleGroup="$primeraCategoria" visible="false" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <HBox layoutX="14.0" layoutY="595.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="118.0">
+         <children>
+            <Button fx:id="resetBut" layoutX="60.0" layoutY="601.0" mnemonicParsing="false" onAction="#reset" rotate="0.3" style="-fx-background-color: transparent;" text="Resetear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="20.0" right="80.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="JaneAusten" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancel" layoutX="151.0" layoutY="601.0" mnemonicParsing="false" onAction="#cancelButton" rotate="0.2" style="-fx-background-color: transparent;" text="Volver">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="JaneAusten" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="ok" layoutX="229.0" layoutY="601.0" mnemonicParsing="false" onAction="#okButton" rotate="0.25" style="-fx-background-color: transparent;" text="Aceptar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="JaneAusten" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="typeWindow" layoutX="48.0" layoutY="32.0" text="Editor de Recetas">
+         <font>
+            <Font name="Old printing press_FREE-version" size="28.0" />
+         </font>
+      </Label>
+   </children>
+   <stylesheets>
+      <URL value="@../view/application.css" />
+      <URL value="@../view/editorStars.css" />
+   </stylesheets>
+</AnchorPane>

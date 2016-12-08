@@ -1,0 +1,18 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+/*Modificar estrellas Rating */
+.rating > .container > .button {
+	  -fx-background-image: url(../../../../images/unselected-star.png);
+	  -fx-padding: 16 16; 
+	  -fx-background-size: 32 32;
+	
+}
+
+
+.rating > .container > .button.strong {
+  	-fx-background-image: url(../../../../images/selected-star.png);
+	-fx-background-size: 32 32;
+	}
+
+ 
